@@ -36,7 +36,7 @@ exports.mostrar = function(req,res){ //Regresa los datos
     res.send(modelos);
 };
 
-exports.delete = function(req,res){
+exports.delete = function(req,res){ //elimina de acuerdo al id que se le pasa
     res.setHeader('Content-Type', 'application/json');
     for (var i = 0; i < modelos.length; i++){
       if (modelos[i].id == req.params.id){
@@ -47,7 +47,7 @@ exports.delete = function(req,res){
       res.send("error http 404");
 };
 
-exports.obtenerToken = function(req,res){
+exports.obtenerToken = function(req,res){ //genera un token XD
   
   res.setHeader('Content-Type', 'application/json');
 
